@@ -1,0 +1,97 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class Schedule</title>
+
+    <!-- Link to Manifest -->
+  <link rel="manifest" href="manifest.json">
+ <!-- Add this line to link the manifest -->
+
+  <link rel="stylesheet" href="style.css">
+      
+    </head>
+    <body>
+      <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <h1>Dept. of EEE</h1>
+      <h2>1st(A) Semester Schedule</h2>
+      <p id="date-time"></p>
+      <p id="last-synced"></p>
+      <button id="semesterButton">Select Semester</button>
+      <button id="dayButton">Select Day: Today</button>
+    </div>
+
+    <!-- Dropdown Menus -->
+    <div id="dayMenu">
+      <button onclick="selectDay('Sunday')">Sunday</button>
+      <button onclick="selectDay('Monday')">Monday</button>
+      <button onclick="selectDay('Tuesday')">Tuesday</button>
+      <button onclick="selectDay('Wednesday')">Wednesday</button>
+      <button onclick="selectDay('Thursday')">Thursday</button>
+      <button onclick="selectDay('Friday')">Friday</button>
+      <button onclick="selectDay('Saturday')">Saturday</button>
+      <button onclick="closeDayMenu()">Close</button>
+
+    </div>
+    <button id="installButton" style="display: none;">Install App</button>
+
+    <!-- Main Content -->
+    <div class="main-content" id="schedule"></div>
+
+    <!-- Footer -->
+    <div class="footer">
+  <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle></svg>
+</div> -->
+<p>Maintaining by CR</p>
+        <div style="display: none;">
+    <a href='https://www.free-website-hit-counter.com'>
+        <img src='https://www.free-website-hit-counter.com/zc.php?d=4&id=1684&s=5' border='0' alt='Free Website Hit Counter'>
+    </a>
+    <br />
+    <small>
+        <a href='https://www.free-website-hit-counter.com' title="Free Website Hit Counter">Free website hit counter</a>
+    </small>
+</div>
+
+
+
+  </div>
+
+  <!-- Modal for Selecting Semester -->
+  <div id="semesterModal" class="modal">
+    <div class="modal-content">
+      <h3>Select a Semester</h3>
+      <a href="#" target="_blank">Semester 1</a>
+      <a href="#" target="_blank">Semester 2</a>
+      <a href="#" target="_blank">Semester 3</a>
+      <a href="#" target="_blank">Semester 4</a>
+      <button onclick="closeModal()">Close</button>
+    </div>
+  </div>
+    </body>
+    <script>
+        window.addEventListener('load', () => {
+          registerSW();
+        });
+     
+        // Register the Service Worker
+        async function registerSW() {
+          if ('serviceWorker' in navigator) {
+            try {
+              await navigator
+                    .serviceWorker
+                    .register('serviceworker.js');
+            }
+            catch (e) {
+              console.log('SW registration failed');
+            }
+          }
+        }
+     </script>
+    <script src="./app.js"></script>
+</html>
