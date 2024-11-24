@@ -7,7 +7,7 @@ const scheduleDiv = document.getElementById('schedule');
     
     let selectedDay = 'Today'; // Default value is 'Today'
 
-    const sheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQUmh3soFvFzIKWw8EKZIHECxQDSXbCiV1OMK7Nc3T8VpBbVnfRLm5hE-y9TK9idgObyMHPvTYZVInR/pub?output=tsv';
+    const sheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSJheUy8RJi4QVxPNNVNTkqb0kRqB_tfX7rRsN0QIQR92b6sd7-AA0kyUqJnWJehdpdJ3FPykCH-m9z/pubhtml';
 
     // Update date and time
     function updateDateTime() {
